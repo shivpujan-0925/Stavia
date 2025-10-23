@@ -22,9 +22,7 @@ const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
 
-
 const dbUrl =process.env.ATLASDB_URL;
-
 
 main()
   .then(() => {
@@ -44,7 +42,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
-
 
 const store = MongoStore.create({
   mongoUrl:dbUrl,
@@ -90,8 +87,6 @@ app.use((req,res,next)=> {
   res.locals.currUser = req.user;
   next();
 })
-
-
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
