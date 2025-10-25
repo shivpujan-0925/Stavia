@@ -3,15 +3,25 @@
 <style>
    #filters{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    
+    /* Add these properties for scrolling */
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -ms-overflow-stryle: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
    }
+    #filters::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari, Opera*/
+    }
+
    .filter{
     text-align: center;
     margin-right: 2rem;
     margin-top: 1rem;
     opacity: 0.7;
+    min-width: 20vw;
    }
    .filter:hover{
     opacity: 1;
