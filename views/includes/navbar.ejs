@@ -21,6 +21,10 @@
     padding: 0.5rem 1.5rem 0.5rem 2rem;
     font-size: 0.8rem;
   }
+
+  .stavia{
+    display: none;
+  }
   @media (max-width: 576px) {
     .search-input {
       padding: 0.5rem 1.5rem 0.5rem 2rem;
@@ -28,6 +32,11 @@
     }
     .search-btn {
       padding: 0 0.5rem;
+    }
+
+    .stavia{
+      display: block;
+      color: #ff385c;
     }
   }
 </style>
@@ -39,6 +48,8 @@
     <a class="navbar-brand" href="/listings"
       ><i class="fa-regular fa-compass"></i
     ></a>
+
+    <div class="stavia ms-auto"><h4>Stavia</h4></div>
     <button
       class="navbar-toggler"
       type="button"
