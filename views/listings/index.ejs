@@ -21,17 +21,19 @@
     margin-right: 2rem;
     margin-top: 1rem;
     opacity: 0.7;
-    min-width: 20vw;
+    
    }
    .filter:hover{
     opacity: 1;
     cursor: pointer;
    }
-
-   .filter p{
-    font-size: 0.8rem;
-   }
-
+  
+    @media (max-width:576px){
+      .filter{
+       min-width: 20vw;
+      }
+    }
+    
    .tax-info{
     display:none;
    }
