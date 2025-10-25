@@ -18,7 +18,7 @@
 
    .filter{
     text-align: center;
-    margin-right: 2rem;
+    margin-right: 1rem;
     margin-top: 1rem;
     opacity: 0.7;
     
@@ -27,10 +27,18 @@
     opacity: 1;
     cursor: pointer;
    }
+
+   .stavia{
+    display: none;
+   }
   
     @media (max-width:576px){
       .filter{
        min-width: 20vw;
+      }
+      .stavia{
+        display:block;
+        color: #ff385c;
       }
     }
     
@@ -52,6 +60,7 @@
 <div id="filters">
   <div class="filter">
     <div><i class="fa-solid fa-fire-flame-curved"></i></div>
+    <div class="stavia ms-auto"><h4>Stavia</h4></div>
      <p>Trendings</p>
   </div>
   <div class="filter">
