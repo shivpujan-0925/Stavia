@@ -16,13 +16,12 @@ body{
     background-color: white;
 }
 .fa-compass {
-    color: #ff385c;
+    color: #ff385c !important;
     font-size: 2rem;
 }
 .nav-link {
     color: #222222 !important;
 
-    
 }
 .nav-link:hover {
    text-decoration: underline !important;   
