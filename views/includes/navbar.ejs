@@ -6,18 +6,29 @@
     padding: 0 1rem 0 1rem;
   }
   .search-btn:hover {
-    background-color: #ff385c;
+    background-color: #e03150;
     color: #fff;
+    box-shadow: 0 2px 8px rgba(256, 56, 92, 0.2);
+    transition: background-color 0.2s, box-shadow 0.2s;
   }
   .search-btn i {
     display: inline;
     margin-right: 0.3rem;
   }
 
-  .search-input{
+  .search-input {
     border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 2rem;
     font-size: 0.8rem;
+  }
+  @media (max-width: 768px) {
+    .search-input {
+      padding: 0.5rem 1.5rem 0.5rem 2rem;
+      font-size: 0.7rem;
+    }
+    .search-btn {
+      padding: 0 0.5rem;
+    }
   }
 </style>
 
@@ -49,7 +60,7 @@
             placeholder="Search Destination"
             aria-label="Search"
           />
-          <button class="btn search-btn" type="submit">
+          <button class="btn btn-primary search-btn" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>Search
           </button>
         </form>
@@ -57,13 +68,14 @@
 
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new"><b>Become a host</b></a>
-        <% if(!currUser) {%>
+        <!-- If user is not logged in -->
+        <% if(!currUser) { %>
         <a class="nav-link" href="/signup"><b>Signup</b></a>
         <a class="nav-link" href="/login"><b>Login</b></a>
-        <%}%> 
-        <% if(currUser) {%>
-        <a class="nav-link" href="/logout"><b>Logout</b></a>
         <% } %>
+        <!-- If user is logged in -->
+        <% if(currUser) { %>
+        <a class="nav-link" href="/logout"><b>Logout</b></a>
       </div>
     </div>
   </div>
